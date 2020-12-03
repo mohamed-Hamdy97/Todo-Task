@@ -1,0 +1,222 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background: white;
+  }
+  body{
+    min-width:500px;        /* Suppose you want minimum width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:500px;            /* As IE6 ignores !important it will set width as 1000px; */
+ }
+ 
+ 
+  /* main page <todos page> */
+  
+  .list-todos-title {
+    padding: 10px 0;
+    background: #2e7c31;
+    text-align: center;
+  }
+  
+  .list-todos-title h1 {
+    font-weight: 400;
+    margin: 0;
+    color: white;
+  }
+  
+  .list-todos-content {
+    padding: 0 0 80px;
+    flex: 1;
+  }
+  
+
+  .todoCategory {
+    padding: 0 10px 20px;
+  }
+  
+  @media (min-width: 600px) {
+    .todoCategory {
+      padding: 0 10px 0px;
+    }
+  }
+
+  .todoCategory-title {
+    border-bottom: 1px solid #dedede;
+  }
+  
+  .todoCategory-todos {
+    text-align: center;
+  }
+  
+  .open-Create-Todo {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+  }
+  
+  .open-Create-Todo .createTodoBtn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2e7d32;
+    background-image: url('./icons/add.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-size: 0;
+    outline: 0;
+  }
+  
+  .open-Create-Todo .createTodoBtn:hover {
+    background-color: rgb(0, 102, 0);
+  }
+
+
+  /*  start todo-list */
+
+  .todo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-right: 50px;
+    box-shadow: 8px 8px 15px -5px rgba(0,0,0,0.58);
+    border-radius: 10px;
+  }
+  
+  .todo:hover{
+    -moz-transform: translate(8px, 0px);
+    -webkit-transform: translate(8px, 0px);
+    -o-transform: translate(8px, 0px);
+    -ms-transform: translate(8px, 0px);
+    transform: translate(8px, 0px);
+  }
+
+  .todo-content{
+    width: 45%;
+    text-align: left;
+    padding: 10px;
+    border-right: 3px#f5f1f1 solid;
+  }
+  
+  .todo-content p{
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    color: #ababab
+  }
+  p{
+    color: #ababab
+  }
+
+  .deadline-section {
+    width: 25%;
+    text-align: left;
+    padding: 10px;
+    border-right: 3px#f5f1f1 solid;
+  }
+
+  .deadline-section p{
+    margin: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Assigned-section{
+    width: 15%;
+  }
+
+  .todo-satus-btn{
+    display: flex;
+    align-items: flex-end;
+  }
+  .last-section{
+    display: flex;
+  }
+  .todo-satus-changer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #60ac5d;
+    background-image: url('./icons/arrow-drop-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom: -15px;
+    margin-right: 25px;
+  }
+
+  .todo-satus-changer select{
+    width: 250;
+    height: 250;
+    opacity: 0;
+    cursor: pointer;
+  }
+  select option:checked{
+    color:red;
+  }
+
+  /* create to do */
+
+  .create-todo-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  form{
+    width: 50%;
+    margin: 80px 0;
+  }
+
+.row {
+      display: grid;
+}
+
+.deadline-select{
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  padding: 13px 10px;
+  border-radius: 10px;
+  border: 2px#f5f1f1 solid;
+  margin:10px 0; 
+  font-size: 18;
+}
+
+.add-btn{
+  width: 100%;
+  border-radius: 10px;
+  /* height: 30px; */
+  padding: 10px;
+  color: white;
+  background-color: green;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.priority select{
+  width: 100%;
+  height: 40px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  border: 2px#f5f1f1 solid;
+}
+
+.add-btn:disabled,
+.add-btn[disabled]{
+  border: 1px solid #999999;
+  background-color: #e4e1e1;
+  color: #666666;
+}
