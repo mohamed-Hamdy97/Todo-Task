@@ -41,13 +41,14 @@ export const intialTodos = [
     }
 ]
 
-export const simulateUsers = [
-    {
-        id: 'sadas54sdafsf',
-        name: 'ahmed',
-        todos: []
-    }
-]
+//plus feature to add to the store 
+// export const simulateUsers = [
+//     {
+//         id: 'sadas54sdafsf',
+//         name: 'ahmed',
+//         todos: []
+//     }
+// ]
 
 function generateUID() {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)

@@ -4,7 +4,7 @@ import { formateDate } from '../utils/helpers';
 import { connect } from "react-redux";
 
 const TodoItem = ({ todoItem, dispatch }) => {
-    const { id, title, description, status, startDate, endDate, assignedTo, priority } = todoItem ? todoItem : null
+    const { id, title, description, status, startDate, endDate, assignedTo } = todoItem ? todoItem : null
 
     const active = (e) => {
         if (e.target.value !== status) {
@@ -33,7 +33,6 @@ const TodoItem = ({ todoItem, dispatch }) => {
             </div>
             <div className="last-section">
                 {/* <div className="priority">{priority}</div> */}
-                {/* <button onKeyPress={() => RemoveTodo(id)} className="deleteButton">X</button> */}
                 <button className="btn-trach" onClick={() => RemoveTodo(id)}><i className="fa fa-trash" ></i></button>
                 <div className="todo-satus-btn">
                     <div className="todo-satus-changer">

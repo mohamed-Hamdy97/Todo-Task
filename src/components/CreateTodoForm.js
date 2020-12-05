@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { formatToDoItem, simulateUsers } from '../utils/helpers';
+import { formatToDoItem } from '../utils/helpers';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const CreateTodoForm = ({ handleAddTodoItem }) => {
     const [title, setTitle] = useState('');
