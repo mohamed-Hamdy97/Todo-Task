@@ -1,4 +1,4 @@
-import { add_todo, get_todos, update_todo_status } from "../actions/todos"
+import { add_todo, get_todos, remove_Todo, update_todo_status } from "../actions/todos"
 
 export default function todosList(state = [], action) {
     switch (action.type) {
@@ -13,6 +13,10 @@ export default function todosList(state = [], action) {
             return state.map((item) => {
                 return item.id === action.todoId ? { ...item, status: action.newTodoStatus } : item
             });
+        case remove_Todo:
+            return state.filter((item) => {
+                return item.id !== action.todoId
+            })
         default:
             return state
     }

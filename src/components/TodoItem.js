@@ -1,5 +1,5 @@
 import React from 'react'
-import { handleUpdateTodoStatus } from '../actions/todos';
+import { handleRemoveToDo, handleUpdateTodoStatus } from '../actions/todos';
 import { formateDate } from '../utils/helpers';
 import { connect } from "react-redux";
 
@@ -11,6 +11,10 @@ const TodoItem = ({ todoItem, dispatch }) => {
             dispatch(handleUpdateTodoStatus(e.target.value, id))
         }
 
+    }
+
+    const RemoveTodo = (id) => {
+        dispatch(handleRemoveToDo(id))
     }
 
     return (
@@ -29,7 +33,8 @@ const TodoItem = ({ todoItem, dispatch }) => {
             </div>
             <div className="last-section">
                 {/* <div className="priority">{priority}</div> */}
-
+                {/* <button onKeyPress={() => RemoveTodo(id)} className="deleteButton">X</button> */}
+                <button className="btn-trach" onClick={() => RemoveTodo(id)}><i className="fa fa-trash" ></i></button>
                 <div className="todo-satus-btn">
                     <div className="todo-satus-changer">
                         <select defaultValue={status} onClick={(e) => { active(e) }}>

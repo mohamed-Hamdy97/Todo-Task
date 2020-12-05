@@ -4,7 +4,7 @@ import { addTodo } from '../actions/todos';
 import CreateTodoForm from '../components/CreateTodoForm'
 
 const CreateTodoApp = ({ handleAddItem }) => {
-console.log(handleAddItem);
+
     return (
         <div className="create-todo">
             <div className="list-todos-title">

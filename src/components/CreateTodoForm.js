@@ -59,7 +59,7 @@ const CreateTodoForm = ({ handleAddTodoItem }) => {
                     className="form-description"
                     id="new-decription-item"
                     name="new-decription-item"
-                    placeholder="description of the To do"
+                    placeholder="Enter the description of the To do"
                     value={description}
                     onChange={handleItemChange}
                 />
@@ -100,7 +100,7 @@ const CreateTodoForm = ({ handleAddTodoItem }) => {
                     className="add-btn"
                     disabled={!title || !description}
                     aria-label="Add todo item">
-                    add new todo
+                    Submit
                         </button>
             </div>
         </form>

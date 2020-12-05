@@ -2,6 +2,7 @@
 export const get_todos = 'get_todos'
 export const add_todo = 'add_todo_item'
 export const update_todo_status = 'update_todo_status'
+export const remove_Todo = 'remove_Todo'
 
 //get all todos action
 export const getTodos = (todos) => {
@@ -27,6 +28,13 @@ export const updateTodoStatus = (newTodoStatus, todoId) => {
     }
 }
 
+export const removeTodo = (todoId) => {
+    return {
+        type: remove_Todo,
+        todoId
+    }
+}
+
 export const handleAddTodo = (todoItem) => {
     // const todos = JSON.parse(localStorage.getItem('todos'))
     return (dispatch) => {
@@ -43,3 +51,8 @@ export const handleUpdateTodoStatus = (newStatus, todoId) => {
 
 }
 
+export const handleRemoveToDo = (id)=>{
+    return (dispatch)=>{
+        dispatch(removeTodo(id))
+    }
+}

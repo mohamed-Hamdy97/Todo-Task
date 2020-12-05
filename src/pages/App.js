@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import MyTodos from './TodosPage'
-import {Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from "react-redux";
 import CreateTodoApp from './CreateTodoPage';
 import { getInitialData } from '../actions/shared';
@@ -11,18 +11,20 @@ const App = ({ dispatch, todos }) => {
   }, [])
 
   return (
-    // <Router>
+    <Router>
       <Switch>
-        <div className="App">
-          <Route path='/createTodo' render={() => (
-            <CreateTodoApp />
-          )} />
-          <Route exact path='/' render={() => (
-            <MyTodos />
-          )} />
-        </div>
+        <Fragment>
+          <div className="App">
+            <Route path='/createTodo' render={() => (
+              <CreateTodoApp />
+            )} />
+            <Route exact path='/' render={() => (
+              <MyTodos />
+            )} />
+          </div>
+        </Fragment>
       </Switch>
-    // </Router>
+    </Router>
   );
 }
 

@@ -87,7 +87,7 @@ html {
   .todo{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     margin-right: 50px;
     box-shadow: 8px 8px 15px -5px rgba(0,0,0,0.58);
     border-radius: 10px;
@@ -140,13 +140,13 @@ html {
     align-items: flex-end;
   }
   .last-section{
-    display: flex;
+    display: grid;
   }
   .todo-satus-changer {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #60ac5d;
+    background: #72d36e;
     background-image: url('./icons/arrow-drop-down.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -201,9 +201,11 @@ input {
   /* height: 30px; */
   padding: 10px;
   color: white;
-  background-color: green;
+  background-color: #5ebe5b;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
+  border: 2px#f5f1f1 solid;
 }
 
 .priority select{
@@ -216,7 +218,26 @@ input {
 
 .add-btn:disabled,
 .add-btn[disabled]{
-  border: 1px solid #999999;
-  background-color: #e4e1e1;
+  border: 1px solid #adacac;
+  background-color: #f5f4f4;
   color: #666666;
+  border: 2px#f5f1f1 solid;
+}
+
+.btn-trach {
+  background-color: rgb(250, 152, 152);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  height: 38px;
+  border-radius: 22px;
+  color: white;
+  width: 40px;
+  margin-bottom: 6px;
+  margin-top: -1px;
+}
+
+.btn-trach:hover {
+  background-color: rgb(230, 87, 87);
+  color: white;
 }
